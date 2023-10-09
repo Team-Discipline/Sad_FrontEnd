@@ -36,16 +36,11 @@ export const LogoTitle = styled.div`
   gap: 12px;
   align-items: center;
   & > img {
-    height: 50px;
+    height: 48px;
   }
 `;
 
-export const Main = styled.main`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-`;
+export const Main = styled.main``;
 
 export const Footer = styled.footer`
   display: flex;
