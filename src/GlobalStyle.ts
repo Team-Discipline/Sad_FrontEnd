@@ -1,13 +1,18 @@
 import { createGlobalStyle } from 'styled-components';
 
-export default createGlobalStyle`
+export default createGlobalStyle<{ darkMode: boolean }>`
+:root {
+  --primary: ${(props) => (props.darkMode ? '#1e2329' : 'white')};
+  --secondary: ${(props) => (props.darkMode ? 'white' : '#1e2329')};
+  --border: 1px solid var(--secondary);
+}
   html, body {
     padding: 0;
     margin: 0;
     line-height: 1.6;
     font-size: 18px;
-    background-color: ${(props) => props.theme.primary};
-    color: ${(props) => props.theme.secondary};
+    background-color: var(--primary);
+    color: var(--secondary);
   }
 
   * {
@@ -15,7 +20,7 @@ export default createGlobalStyle`
   }
 
   a {
-    color: ${(props) => props.theme.secondary};
+    color: var(--secondary);
     text-decoration: none;
   }
 

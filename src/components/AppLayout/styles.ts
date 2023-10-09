@@ -1,8 +1,6 @@
 import styled from 'styled-components';
 
-export const Container = styled.div`
-  height: 300vh;
-`;
+export const Container = styled.div``;
 
 export const Header = styled.header`
   height: 64px;
@@ -12,12 +10,12 @@ export const Header = styled.header`
   flex-direction: column;
   justify-content: center;
   padding: 0px 24px;
-  border-bottom: 1px solid black;
+  border-bottom: var(--border);
+  backdrop-filter: blur(5px);
 `;
 
 export const NavBar = styled.nav`
   display: flex;
-
   & > div {
     display: flex;
     align-items: center;
@@ -40,4 +38,19 @@ export const LogoTitle = styled.div`
   & > img {
     height: 50px;
   }
+`;
+
+export const Main = styled.main`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+`;
+
+export const Footer = styled.footer`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 64px;
+  border-bottom: var(--border);
 `;

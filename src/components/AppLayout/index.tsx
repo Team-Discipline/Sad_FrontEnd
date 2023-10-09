@@ -1,10 +1,8 @@
 import React, { useState, useCallback } from 'react';
-import { ThemeProvider } from 'styled-components';
 import { Link } from 'react-router-dom';
 
 import GlobalStyle from '@/GlobalStyle';
-import { brightTheme, darkTheme } from './theme';
-import { Container, LogoTitle, NavBar, Header } from './styles';
+import { Container, LogoTitle, NavBar, Main, Header, Footer } from './styles';
 
 function AppLayout({ children }: { children: React.ReactNode }) {
   const [darkMode, setDarkMode] = useState(false);
@@ -14,8 +12,8 @@ function AppLayout({ children }: { children: React.ReactNode }) {
   }, []);
 
   return (
-    <ThemeProvider theme={darkMode ? darkTheme : brightTheme}>
-      <GlobalStyle />
+    <>
+      <GlobalStyle darkMode={darkMode} />
       <Container>
         <Header>
           <NavBar>
@@ -36,12 +34,10 @@ function AppLayout({ children }: { children: React.ReactNode }) {
             </div>
           </NavBar>
         </Header>
-        <main>
-          <div>{children}</div>
-        </main>
-        <footer>Footer</footer>
+        <Main>{children}</Main>
+        <Footer>Footer</Footer>
       </Container>
-    </ThemeProvider>
+    </>
   );
 }
 
