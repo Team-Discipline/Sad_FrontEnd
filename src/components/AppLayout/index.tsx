@@ -11,6 +11,7 @@ import {
   Footer,
   MobileMenu,
 } from './styles';
+import logoUrl from '/logo.svg';
 
 function AppLayout({ children }: { children: React.ReactNode }) {
   const [darkMode, setDarkMode] = useState(false);
@@ -32,7 +33,7 @@ function AppLayout({ children }: { children: React.ReactNode }) {
             <div>
               <Link to='/'>
                 <LogoTitle>
-                  <img src='/logo.svg' alt='' />
+                  <img src={logoUrl} alt='' />
                   <div>제목</div>
                 </LogoTitle>
               </Link>

@@ -15,7 +15,8 @@
       "@components/*": ["components/*"],
       "@pages/*": ["pages/*"],
       "@/*": ["*"]
-    }
+    },
+    "types": ["node", "vite/client"]
   },
   "include": ["src"]
 }
