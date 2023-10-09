@@ -32,8 +32,8 @@ export default createGlobalStyle<{ darkMode: boolean }>`
     max-width: 100%;
     display: block;
   }
-
-  h1 {
-    margin: 0;
+  
+  ul {
+    padding: 0px;
   }
 `;
